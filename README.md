@@ -1,2 +1,2 @@
-# route.account
+# Account route
 Account and authentication UI
