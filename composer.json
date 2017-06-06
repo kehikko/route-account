@@ -12,5 +12,5 @@
 		"php": ">=7.0.0",
 		"kehikko/installer": "*"
 	},
-	type: "kehikko/route"
+	"type": "kehikko/route"
 }
