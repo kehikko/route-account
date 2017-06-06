@@ -1,0 +1,15 @@
+{
+	"name": "kehikko/route/account",
+	"description": "Kehikko framework basic user account and authentication UI",
+	"license": "MIT",
+	"authors": [
+	{
+		"name": "Antti Partanen",
+		"email": "aehparta@iki.fi"
+	}],
+	"require":
+	{
+		"php": ">=7.0.0"
+	},
+  type: "kehikko/route"
+}
