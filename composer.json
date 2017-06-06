@@ -1,6 +1,6 @@
 {
 	"name": "kehikko/route-account",
-	"type": "kehikko/route",
+	"type": "kehikko-route",
 	"description": "Kehikko framework basic user account and authentication UI",
 	"license": "MIT",
 	"authors": [
