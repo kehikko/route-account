@@ -1,5 +1,5 @@
 {
-	"name": "kehikko/route/account",
+	"name": "kehikko/route-account",
 	"type": "kehikko/route",
 	"description": "Kehikko framework basic user account and authentication UI",
 	"license": "MIT",
