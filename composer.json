@@ -1,5 +1,6 @@
 {
 	"name": "kehikko/route/account",
+	"type": "kehikko/route",
 	"description": "Kehikko framework basic user account and authentication UI",
 	"license": "MIT",
 	"authors": [
@@ -11,6 +12,5 @@
 	{
 		"php": ">=7.0.0",
 		"kehikko/installer": "*"
-	},
-	"type": "kehikko/route"
+	}
 }
