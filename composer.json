@@ -8,11 +8,6 @@
 		"name": "Antti Partanen",
 		"email": "aehparta@iki.fi"
 	}],
-	"source":
-	{
-		"url": "git@github.com:kehikko/route-account.git",
-		"type": "git"
-	},
 	"require":
 	{
 		"php": ">=7.0.0",
