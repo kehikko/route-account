@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+{% block content %}
+
+{% if reset_done %}
+<h2>Email send</h2>
+<p>Link to reset your password has been send to your email.</p>
+{% else %}
+<div class='site-form-header'>
+
+{% if error %}
+<p class='site-form-error' style='display: block'>{{ error }}</p>
+{% endif %}
+</div>
+
+<div class='site-form-content'>
+<form action='{{ path('AehpartaSecurityBundle_reset') }}' method='post'>
+    <label class='site-form-input-label' for='email'>Email:</label>
+    <br /><input class='site-form-input' type='text' id='email' name='email' value='' />
+
+    <br /><button type='submit' class='site-form-button'><img class='site-form-button-icon' src='{{ asset('/images/classy/16x16/accept.png') }}' />Reset password</button>
+</form>
+</div>
+{% endif %}
+
+{% endblock content %}

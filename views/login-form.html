@@ -1,0 +1,27 @@
+<h1>
+  <span class="fa fa-sign-in">
+  </span>
+  {{ tr('title/login-required') }}
+</h1>
+<form action="{{ route('account:login') }}" method="post" role="form">
+  <div class="input-group">
+    <div class="input-group input-group-sm">
+      <label>
+        {{ tr('label/username') }}:
+      </label>
+      <input class="form-control" name="username" type="text"/>
+    </div>
+    <div class="input-group input-group-sm">
+      <label>
+        {{ tr('label/password') }}:
+      </label>
+      <input class="form-control" name="password" type="password"/>
+    </div>
+    <div class="input-group">
+      &nbsp;
+    </div>
+    <button class="btn btn-primary" type="submit">
+      {{ tr('label/login') }}
+    </button>
+  </div>
+</form>

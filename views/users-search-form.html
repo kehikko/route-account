@@ -1,0 +1,19 @@
+<div class="dropdown btn btn-sm users-search-form">
+  <input id="{{ formid }}" class="form-control ul-search-input users-search-input" placeholder="{{ tr('label/users-search') }}" type="text"/ data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" search-target="user-list-{{ formid }}">
+  <ul id="user-list-{{ formid }}" search-max="{{ searchmax }}" aria-labelledby="{{ form-id }}" class="dropdown-menu ul-searchable users-search-list">
+  {% for user in users %}
+    <li searchable="yes" search-value="{{ user.get('name') }} {{ user.get('username') }}" {% if loop.index > searchmax %}style="display: none;"{% endif %}>
+      <a href="#" class="users-search-list-user {{ options.classes }}" username="{{ user.get('username') }}" name="{{ user.get('name') }}">
+        <span class="fa fa-user">
+        </span>
+        &nbsp;
+        {% if user.get('name') != user.get('username') %}
+          {{ user.get('name') }} ({{ user.get('username') }})
+        {% else %}
+          {{ user.get('name') }}
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>

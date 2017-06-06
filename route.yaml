@@ -1,0 +1,63 @@
+login:
+  pattern: '/login'
+  controller: Auth
+  action: login
+
+logout:
+  pattern: '/logout'
+  controller: Auth
+  action: logout
+  method: get
+
+password:
+  pattern: '/account/password'
+  controller: Auth
+  action: password
+  access: role:user
+
+password_for_user:
+  pattern: '/account/password/{username}'
+  controller: Auth
+  action: password
+  access: role:admin
+
+login-form:
+  controller: Auth
+  action: loginForm
+
+reset:
+  pattern: '/account/reset'
+  controller: Auth
+  action: reset
+  method: get
+
+register:
+  pattern: '/account/register'
+  controller: Auth
+  action: register
+  method: get
+
+settings:
+  pattern: '/account/settings/{username?}'
+  controller: Users
+  action: settings
+  access: role:user
+
+create:
+  pattern: '/account/create'
+  controller: Users
+  action: create
+  access: role:admin
+
+fake:
+  pattern: '/account/fake/{username}'
+  controller: Users
+  action: fake
+  access: role:root
+
+users-search-form:
+  controller: Users
+  action: searchForm
+  access: role:user
+  format: html
+

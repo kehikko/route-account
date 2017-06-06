@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    {{ tr('title/settings') }}
+  </div>
+  <div class="panel-body">
+    <form class="" role="form" action="{% if create %}{{ route('create') }}{% else %}{{ route('settings', { username: username }) }}{% endif %}" method="post">
+      <div class="form-group">
+        <label for="user-settings-username">
+          {{ tr('label/username') }}:
+        </label>
+        <input type="text" class="form-control" {% if not create %}readonly{% endif %} name="data[username]" value="{{ username }}" id="user-settings-username" />
+      </div>
+      <div class="form-group">
+        <label for="user-settings-name">
+          {{ tr('label/name') }}:
+        </label>
+        <input type="text" class="form-control" name="data[name]" value="{{ name }}" id="user-settings-name" />
+      </div>
+      <div class="form-group">
+        <label for="user-settings-email">
+          {{ tr('label/email') }}:
+        </label>
+        <input type="text" class="form-control" name="data[email]" value="{{ email }}" id="user-settings-email" />
+      </div>
+      <div class="form-group">
+        <label for="user-settings-lang">
+          {{ tr('label/lang') }}:
+        </label>
+        <select class="form-control" name="data[lang]" id="user-settings-lang">
+          {% for key, language in languages %}
+          <option value="{{ key }}" {% if lang == key %}selected{% endif %}>
+            {{ language }}
+          </option>
+          {% endfor %}
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        {% if create %}
+        {{ tr('actions/create') }}
+        {% else %}
+        {{ tr('actions/save') }}
+        {% endif %}
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

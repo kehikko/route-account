@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+{% block content %}
+
+{% if registered %}
+<h2>Thank you for your registration!</h2>
+<p>You can continue now by logging in.</p>
+{% else %}
+<div class='site-form-header'>
+
+{% if error %}
+<p class='site-form-error' style='display: block'>{{ error }}</p>
+{% endif %}
+</div>
+
+<div class='site-form-content'>
+<form action='{{ path('AehpartaSecurityBundle_register') }}' method='post'>
+    <label class='site-form-input-label' for='name'>Name:</label>
+    <br /><input class='site-form-input' type='text' id='name' name='name' value='{{ name }}' />
+
+    <br /><label class='site-form-input-label' for='username'>Username:</label>
+    <br /><input class='site-form-input' type='text' id='username' name='username' value='{{ username }}' />
+
+    <br /><label class='site-form-input-label' for='password1'>Password:</label>
+    <br /><input class='site-form-input' type='password' id='password1' name='password1' />
+
+    <br /><label class='site-form-input-label' for='password2'>Re-type password:</label>
+    <br /><input class='site-form-input' type='password' id='password2' name='password2' />
+
+    <br /><label class='site-form-input-label' for='email'>Email:</label>
+    <br /><input class='site-form-input' type='text' id='email' name='email' value='{{ email }}' />
+
+    <br /><button type='submit' class='site-form-button'><img class='site-form-button-icon' src='{{ asset('/images/classy/16x16/accept.png') }}' />Register</button>
+</form>
+</div>
+{% endif %}
+
+{% endblock content %}

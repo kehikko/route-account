@@ -1,0 +1,50 @@
+en:
+  title:
+    login: 'Login'
+    login-required: 'Login required'
+    password-change: 'Change your password'
+    password-change-user: 'Change password for account %s'
+    settings: 'User settings'
+  label:
+    login: 'Log in'
+    logout: 'Log out'
+    password-old: 'Old password'
+    password-new1: 'New password'
+    password-new2: 'Re-type new password'
+    password-change: 'Change password'
+    settings: 'Settings'
+    fake-user: 'Fake yourself as this user'
+    users-search: 'Find users...'
+  msg:
+    error:
+      email-invalid: 'Invalid email address.'
+      user-nonexisting: 'User does not exist.'
+      user-create: 'Failed to create new user.'
+    success:
+      user-save-settings: 'Your settings have been saved.'
+      user-create: 'New user created succesfully.'
+fi:
+  title:
+    login: 'Kirjaudu'
+    login-required: 'Kirjaudu'
+    password-change: 'Vaihda salasanasi'
+    password-change-user: 'Salasana vaihdetaan tunnukselle %s'
+    settings: 'Käyttäjäasetukset'
+  label:
+    login: 'Kirjaudu sisään'
+    logout: 'Kirjaudu ulos'
+    password-old: 'Vanha salasana'
+    password-new1: 'Uusi salasana'
+    password-new2: 'Uusi salasana uudestaan'
+    password-change: 'Vaihda salasana'
+    settings: 'Asetukset'
+    fake-user: 'Tekeydy käyttäjäksi'
+    users-search: 'Etsi käyttäjiä...'
+  msg:
+    error:
+      email-invalid: 'Virheellinen sähköpostiosoite.'
+      user-nonexisting: 'Käyttäjää ei löydy.'
+      user-create: 'Käyttäjän luonnissa tapahtui virhe.'
+    success:
+      user-save-settings: 'Asetuksesi on tallennettu.'
+      user-create: 'Uusi käyttäjä luotiin onnistuneesti.'
