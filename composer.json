@@ -11,6 +11,6 @@
 	"require":
 	{
 		"php": ">=7.0.0",
-		"kehikko/installer": "*"
+		"kehikko/composer": "*"
 	}
 }
