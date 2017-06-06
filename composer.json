@@ -11,7 +11,7 @@
 	"source":
 	{
 		"url": "git@github.com:kehikko/route-account.git",
-		"type": "git",
+		"type": "git"
 	},
 	"require":
 	{
