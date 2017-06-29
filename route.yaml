@@ -53,7 +53,7 @@ fake:
   pattern: '/account/fake/{username}'
   controller: Users
   action: fake
-  access: role:admin
+  access: role:fake
 
 users-search-form:
   controller: Users
