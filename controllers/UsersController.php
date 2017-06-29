@@ -117,7 +117,12 @@ class UsersController extends Core\Controller
 	public function fakeAction($username)
 	{
 		$this->session->fakeUser($username);
-		throw new RedirectException($this->kernel->config['urls']['base']);
+		$url = $this->getConfigValue('urls', 'account-redirect-fake');
+		if (!$url)
+		{
+			$url = $this->getConfigValue('urls', 'base');
+		}
+		throw new RedirectException($url);
 	}
 
 	public function searchFormAction($options = null)
