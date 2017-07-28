@@ -62,7 +62,7 @@ class UsersController extends Core\Controller
 			$params = $this->input('data');
 
 			/* check email */
-			if (!Validate::email($params['email']) && strlen($params['email']) > 0)
+			if (!\Core\Validate::email($params['email']) && strlen($params['email']) > 0)
 			{
 				$this->kernel->msg('error', $this->tr('msg/error/email-invalid'));
 			}
