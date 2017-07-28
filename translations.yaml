@@ -15,6 +15,7 @@ en:
     settings: 'Settings'
     fake-user: 'Fake yourself as this user'
     users-search: 'Find users...'
+    phone-number: 'Phone number'
   msg:
     error:
       email-invalid: 'Invalid email address.'
@@ -40,6 +41,7 @@ fi:
     settings: 'Asetukset'
     fake-user: 'Tekeydy käyttäjäksi'
     users-search: 'Etsi käyttäjiä...'
+    phone-number: 'Puhelinnumero'
   msg:
     error:
       email-invalid: 'Virheellinen sähköpostiosoite.'
