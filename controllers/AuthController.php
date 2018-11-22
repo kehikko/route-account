@@ -27,7 +27,7 @@ class AuthController extends Core\Controller
             $params['last_username'] = $username;
         }
         
-        throw new \RedirectException(\kernel::expand('{urls:login}'), 302);
+        throw new \RedirectException(\kernel::expand('{url:login}'), 302);
     }
 
     public function logoutAction()
@@ -38,7 +38,7 @@ class AuthController extends Core\Controller
         if ($this->session->get('username')) {
             $this->session->destroy();
         }
-        throw new \RedirectException(\kernel::expand('{urls:base}'), 302);
+        throw new \RedirectException(\kernel::expand('{url:base}'), 302);
     }
 
     public function passwordAction($username = false)
