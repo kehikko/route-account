@@ -8,7 +8,7 @@ class AuthController extends Core\Controller
         $this->kernel->historyDisable();
 
         if ($this->session->get('username')) {
-            throw new RedirectException($this->route('logout'), 302);
+            throw new \RedirectException($this->route('logout'), 302);
         }
 
         $params                  = array();
@@ -20,14 +20,14 @@ class AuthController extends Core\Controller
 
             $ok = $this->session->authenticate($username, $password);
             if ($ok) {
-                throw new RedirectException($this->kernel->historyPop(), 302);
+                throw new \RedirectException($this->kernel->historyPop(), 302);
             }
 
             $this->kernel->msg('error', 'Login failed.');
             $params['last_username'] = $username;
         }
-        
-        throw new \RedirectException(\kernel::expand('{url:login}'), 302);
+
+        return $this->render('login.html', $params);
     }
 
     public function logoutAction()
